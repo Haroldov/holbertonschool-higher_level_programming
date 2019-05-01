@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def uppercase(str):
     length = len(str)
+    if length == 0:
+        return
     cad = ""
     for ind, char in enumerate(str):
         if ind == length - 1:
