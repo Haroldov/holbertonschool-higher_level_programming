@@ -7,7 +7,6 @@ def uppercase(str):
             cad = "\n"
         ascii = ord(char)
         if ascii >= 97 and ascii <= 122:
-            print("{}".format(chr(ascii - 32)), end=cad)
-        else:
-            print("{}".format(chr(ascii)), end=cad)
+            ascii -= 32
+        print("{}".format(chr(ascii)), end=cad)
     return
