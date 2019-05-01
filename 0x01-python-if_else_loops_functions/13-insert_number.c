@@ -11,11 +11,13 @@
 
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *new_node = malloc(sizeof(listint_t)), *head_cpy = *head;
-	listint_t *tmp = *head;
+	listint_t *new_node = malloc(sizeof(listint_t)), *head_cpy;
+	listint_t *tmp;
 
 	if (new_node == NULL || head == NULL || *head == NULL)
 		return (NULL);
+	head_cpy = *head;
+	tmp = *head;
 	(*new_node).n = number;
 	while (head_cpy != NULL)
 	{
