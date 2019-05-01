@@ -4,7 +4,7 @@ def uppercase(str):
     cad = ""
     for ind, char in enumerate(str):
         if ind == length - 1:
-            cad = " \n"
+            cad = "\n"
         ascii = ord(char)
         if ascii >= 97 and ascii <= 122:
             ascii -= 32
