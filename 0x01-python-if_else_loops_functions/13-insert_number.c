@@ -29,20 +29,13 @@ listint_t *insert_node(listint_t **head, int number)
 			head_cpy = (*head_cpy).next;
 		}
 	}
-	if (head_cpy != NULL)
+	if (head_cpy != NULL && tmp == *head)
 	{
-		if (tmp == *head)
-		{
-			(*new_node).next = tmp;
-			*head = new_node;
-			return (new_node);
-		}
-		else
-		{
-			(*new_node).next = (*tmp).next;
-			(*tmp).next = new_node;
-			return (new_node);
-		}
+		(*new_node).next = tmp;
+		*head = new_node;
+		return (new_node);
 	}
-	return (NULL);
+	(*new_node).next = (*tmp).next;
+	(*tmp).next = new_node;
+	return (new_node);
 }
