@@ -10,3 +10,4 @@ def uppercase(str):
             print("{}".format(chr(ascii - 32)), end=cad)
         else:
             print("{}".format(chr(ascii)), end=cad)
+    return
