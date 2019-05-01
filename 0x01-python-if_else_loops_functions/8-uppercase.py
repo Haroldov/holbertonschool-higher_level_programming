@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 def uppercase(str):
-    upStr = ""
-    for char in str:
+    length = len(str)
+    cad = ""
+    for ind, char in enumerate(str):
+        if ind == length - 1:
+            cad = "\n"
         ascii = ord(char)
         if ascii >= 97 and ascii <= 122:
-            upStr += chr(ascii - 32)
+            print("{}".format(chr(ascii - 32)), end=cad)
         else:
-            upStr += chr(ascii)
-    else:
-        print(upStr)
+            print("{}".format(chr(ascii)), end=cad)
