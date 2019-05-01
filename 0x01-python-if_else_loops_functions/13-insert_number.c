@@ -23,11 +23,8 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		if ((*head_cpy).n > number)
 			break;
-		else
-		{
-			tmp = head_cpy;
-			head_cpy = (*head_cpy).next;
-		}
+		tmp = head_cpy;
+		head_cpy = (*head_cpy).next;
 	}
 	if (head_cpy != NULL && tmp == *head)
 	{
