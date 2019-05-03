@@ -1,8 +1,8 @@
 #!/usr/bin/python
 if __name__ == "__main__":
-    import calculator_1 as ops
+    from calculator_1 import add, sub, mul, div
     from sys import argv, exit
-    opt = [("+", ops.add), ("-", ops.sub), ("*", ops.mul), ("/", ops.div)]
+    opt = [("+", add), ("-", sub), ("*", mul), ("/", div)]
     argc = len(argv)
     if (argc != 4):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
