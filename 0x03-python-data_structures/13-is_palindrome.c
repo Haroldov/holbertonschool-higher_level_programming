@@ -9,24 +9,19 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *node = *head, *tmp = *head;
-	unsigned int len = 0, i = 0, j = 0;
+	listint_t *node = *head, *tmp = NULL, *comp = NULL;
 
-	while (node != NULL)
-	{
-		node = node->next;
-		len++;
-	}
-	node = *head;
-	while (i < len / 2)
+	while (node->next != tmp)
 	{
 		tmp = *head;
-		for (j = 0; j < len - 1; j++)
+		while (tmp->next != comp)
+		{
 			tmp = tmp->next;
+		}
 		if (tmp->n != node->n)
 			return (0);
+		comp = tmp;
 		node = node->next;
-		len--;
 	}
 	return (1);
 }
