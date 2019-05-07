@@ -23,6 +23,7 @@ int is_palindrome(listint_t **head)
 		return (1);
 	if (len % 2 != 0)
 	{
+		node = *head;
 		for (ind = 0; ind < len / 2 ; ind++)
 			node = node->next;
 		sum -= node->n;
