@@ -9,7 +9,8 @@ def roman_to_int(roman_string):
     for c in roman_string:
         tmp = dic.get(c, 0)
         if tmp > pastNum:
-            num = tmp - num
+            num -= 2 * pastNum
+            num += tmp
         else:
             num += tmp
         pastNum = tmp
