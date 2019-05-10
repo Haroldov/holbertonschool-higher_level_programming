@@ -33,10 +33,10 @@ void print_python_bytes(PyObject *p)
 	printf("[.] bytes object info\n");
 	if (PyBytes_Check(p))
 	{
-		printf("size: %li\n", ((PyVarObject *)p)->ob_size);
-		printf("trying string: %s\n", str);
+		printf("  size: %li\n", ((PyVarObject *)p)->ob_size);
+		printf("  trying string: %s\n", str);
 		bytes = ((PyVarObject *)p)->ob_size <= 10 ? ((PyVarObject *)p)->ob_size + 1 : 10;
-		printf("first %i bytes:", bytes);
+		printf("  first %i bytes:", bytes);
 		for (i = 0; i < bytes; i++)
 			printf(" %02x ", str[i] & 0xFF);
 		printf("\n");
