@@ -47,9 +47,12 @@ void print_python_bytes(PyObject *p)
 		printf("  first %i bytes:", bytes);
 		for (i = 0; i < bytes; i++)
 			if (i + 1 >= bytes)
-				printf(" %02x", str[i] & 0xFF);
+				printf("%02x", str[i] & 0xFF);
 			else
-				printf(" %02x ", str[i] & 0xFF);
+				if (i == 0)
+					printf(" %02x ", str[i] & 0xFF);
+				else
+					printf("%02x ", str[i] & 0xFF);
 		printf("\n");
 	}
 	else
