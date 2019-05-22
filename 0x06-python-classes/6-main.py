@@ -21,8 +21,10 @@ my_square_3.my_print()
 
 print("--")
 
-my_square_3 = Square(2, (3, "d"))
-my_square_3.my_print()
+my_square = Square(3, (1, 1))
+print(my_square.size)
+print(my_square.area())
+print(my_square.position)
 
 print("--")
 
