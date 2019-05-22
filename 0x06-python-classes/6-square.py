@@ -48,4 +48,4 @@ class Square:
         else:
             print("\n" * self.__position[1], end="")
             for rows in range(self.__size):
-                print("_" * self.__position[0], "#" * self.__size, sep="")
+                print(" " * self.__position[0], "#" * self.__size, sep="")
