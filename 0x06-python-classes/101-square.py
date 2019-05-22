@@ -53,5 +53,13 @@ class Square:
                 print(" " * self.__position[0], "#" * self.__size, sep="")
 
     def __str__(self):
-        self.my_print()
-        return ""
+        string = ""
+        if (self.__size == 0):
+            string += "\n"
+        else:
+            string += "\n" * self.__position[1]
+            for rows in range(self.__size):
+                string += " " * self.__position[0]
+                string += "#" * self.__size
+                string += "\n"
+        return string[:-1]
