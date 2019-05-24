@@ -69,3 +69,7 @@ hello
 .
 <BLANKLINE>
 
+>>> text_indentation(6)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
