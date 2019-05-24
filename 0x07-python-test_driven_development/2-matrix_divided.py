@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
         matrix divided by div
     """
     checkType = []
-    if type(matrix) is not list:
+    if type(matrix) is not list or len(matrix) == 0:
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
     for row in matrix:
