@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-def matrix_mul(m_a, m_b):
+"""
+module that has matrix operations
+"""
 
+
+def matrix_mul(m_a, m_b):
+    """ matrix multiplication"""
     if type(m_a) is not list:
         raise TypeError("m_a must be a list or")
     if type(m_b) is not list:
