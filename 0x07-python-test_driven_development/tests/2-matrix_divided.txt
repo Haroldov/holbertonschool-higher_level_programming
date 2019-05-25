@@ -77,3 +77,6 @@ True
 ...     check.append(type(row) is list)
 >>> all(check)
 True
+
+>>> matrix_divided([[], [], []], 1)
+[[], [], []]
