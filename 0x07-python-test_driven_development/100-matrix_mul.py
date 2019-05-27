@@ -7,7 +7,7 @@ module that has matrix operations
 def matrix_mul(m_a, m_b):
     """ matrix multiplication"""
     if type(m_a) is not list:
-        raise TypeError("m_a must be a list or")
+        raise TypeError("m_a must be a list")
     if type(m_b) is not list:
         raise TypeError("m_b must be a list")
     for row in m_a:
