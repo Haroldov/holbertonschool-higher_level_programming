@@ -28,3 +28,23 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         """ test 5"""
         self.assertEqual(max_integer([]), None)
+
+    def test_max_beginning(self):
+        """ test 6"""
+        self.assertEqual(max_integer([15, 9, 8]), 15)
+
+    def test_max_middle(self):
+        """ test 7"""
+        self.assertEqual(max_integer([6, 9, 8]), 9)
+
+    def test_neg_num(self):
+        """ test 7"""
+        self.assertEqual(max_integer([6, 9, -8]), 9)
+
+    def test_allneg_num(self):
+        """ test 7"""
+        self.assertEqual(max_integer([-6, -9, -8]), -6)
+
+    def test_one_elem(self):
+        """ test 7"""
+        self.assertEqual(max_integer([-6]), -6)
