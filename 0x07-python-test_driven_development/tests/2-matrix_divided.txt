@@ -80,3 +80,5 @@ True
 
 >>> matrix_divided([[], [], []], 1)
 [[], [], []]
+
+>>> matrix_divided()
