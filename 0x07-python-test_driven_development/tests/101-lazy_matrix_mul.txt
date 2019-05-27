@@ -70,3 +70,8 @@ TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 
 Traceback (most recent call last):
     ...
 TypeError: lazy_matrix_mul() missing 1 required positional arguments: 'm_b'
+
+>>> matrix_mul([[2, 3], [3, 5]], "hello")
+Traceback (most recent call last):
+    ...
+ValueError: Scalar operands are not allowed, use '*' instead
