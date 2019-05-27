@@ -1,10 +1,10 @@
-The ``100-matrix_mul`` module
+The ``101-lazy_matrix_mul`` module
 ======================
 
-Using ``matrix_mul``
+Using ``lazy_matrix_mul``
 ------------------------
 
->>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+>>> matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
 >>> m_a = [[1, 2], [3, 4]]
 >>> m_b = [[1, 2], [3, 4]]
@@ -55,3 +55,8 @@ ValueError: m_a can't be empty
 Traceback (most recent call last):
     ...
 ValueError: m_b can't be empty
+
+>>> matrix_mul("hello", [[2, 3], [3, 5]])
+Traceback (most recent call last):
+    ...
+ValueError: Scalar operands are not allowed, use '*' instead
