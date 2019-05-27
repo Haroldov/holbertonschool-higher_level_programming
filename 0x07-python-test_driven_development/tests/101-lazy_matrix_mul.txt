@@ -60,3 +60,13 @@ ValueError: m_b can't be empty
 Traceback (most recent call last):
     ...
 ValueError: Scalar operands are not allowed, use '*' instead
+
+>>> matrix_mul()
+Traceback (most recent call last):
+    ...
+TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+>>> matrix_mul([[1, 4], [5, 9]])
+Traceback (most recent call last):
+    ...
+TypeError: lazy_matrix_mul() missing 1 required positional arguments: 'm_b'
