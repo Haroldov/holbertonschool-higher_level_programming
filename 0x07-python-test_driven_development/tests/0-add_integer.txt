@@ -39,3 +39,10 @@ TypeError: a must be an integer
 Traceback (most recent call last):
     ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> print(add_integer(1e100, 1e10000))
+None
+
+>>> print(add_integer(float('nan')))
+nan
+
