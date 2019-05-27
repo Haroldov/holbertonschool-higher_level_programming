@@ -21,3 +21,7 @@ try:
     print(add_integer(1e100, 1e10000))
 except Exception as e:
     print(e)
+try:
+    print(add_integer(float('nan')))
+except Exception as e:
+    print(e)
