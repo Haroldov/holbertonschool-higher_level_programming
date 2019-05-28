@@ -69,7 +69,7 @@ elif N < 4:
 
 cb = chess_board(N)
 cb.create_game()
-for row in range(N):
+for row in range(N // 2):
     for col in range(N):
         queens_loc = []
         cb.create_game()
@@ -82,4 +82,5 @@ for row in range(N):
             if cb.check_pos() == False:
                 break
             queens_loc.append(cb.next_queen)
-        print(queens_loc)
+        if len(queens_loc) == 4:
+            print(queens_loc)
