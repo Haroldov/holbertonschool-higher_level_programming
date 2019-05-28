@@ -50,7 +50,23 @@ class chess_board:
                 return True
         return False
 
-N = 6
+from sys import argv, exit, stderr
+
+if len(argv) != 2:
+    stderr.write("Usage: nqueens N\n")
+    exit(1)
+try:
+    N = int(argv[1])
+except:
+    stderr.write("N must be a number\n")
+    exit(1)
+if type(N) is not int:
+    stderr.write("N must be a number\n")
+    exit(1)
+elif N < 4:
+    stderr.write("N must be at least 4\n")
+    exit(1)
+
 cb = chess_board(N)
 cb.create_game()
 for row in range(N):
