@@ -5,4 +5,6 @@ class MyList(list):
     """ class doc """
 
     def print_sorted(self):
-        print(self.sort())
+        clone = self.copy()
+        clone.sort()
+        print(clone)
