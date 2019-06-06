@@ -19,3 +19,7 @@ Using ``my_list with inheritance``
 >>> my_list[0] = 100
 >>> print(my_list)
 [100, 4, 2, 3, 5]
+>>> my_list.append([-6])
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
