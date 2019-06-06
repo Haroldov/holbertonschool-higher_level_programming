@@ -24,4 +24,3 @@ except KeyboardInterrupt as e:
         print("File size: {}".format(size))
         for key, val in status.items():
                 print("{}: {}".format(key, val))
-        raise e
