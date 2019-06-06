@@ -5,7 +5,7 @@
 def add_attribute(obj, name, value):
     """ doc """
 
-    if "__slots__" in dir(obj) or hasattr(obj, "__dict__") == False:
+    if "__slots__" in dir(obj) or hasattr(obj, "__dict__") is False:
         raise TypeError("can't add new attribute")
     else:
         setattr(obj, name, value)
