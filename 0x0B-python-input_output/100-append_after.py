@@ -2,17 +2,18 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
-    offset = 0
     with open(filename, 'r') as f:
-        for line in f:
-            offset += len(line)
-            if search_string in line:
-                with open(filename, 'r') as af:
-                    first_half = af.read(offset)
-                    af.seek(offset, 0)
-                    second_half = af.read()
-                with open(filename, 'w') as af:
-                    af.write(first_half)
-                with open(filename, 'a') as af:
-                    af.write(new_string + second_half)
-                offset += len(new_string)
+        text = f.read()
+    lines = text.split('\n')
+    try:
+        lines.remove('')
+    except:
+        pass
+    count = 1
+    for numLine, line in enumerate(lines[:]):
+        if search_string in line:
+            lines = lines[:numLine + count] + [new_string[:-1]] + lines[numLine + count:]
+            count += 1
+    new_text = "\n".join(lines) + '\n'
+    with open(filename, 'w') as f:
+        f.write(new_text)
