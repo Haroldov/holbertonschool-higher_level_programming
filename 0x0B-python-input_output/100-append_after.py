@@ -16,7 +16,7 @@ def append_after(filename="", search_string="", new_string=""):
                      [new_string.replace('\n', '')] + lines[numLine + count:])
             count += 1
     new_text = "\n".join(lines)
-    if new_text != "":
+    if text[-1] == '\n':
         new_text += '\n'
     with open(filename, 'w') as f:
         f.write(new_text)
