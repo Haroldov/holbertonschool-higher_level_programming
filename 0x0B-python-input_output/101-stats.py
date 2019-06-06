@@ -21,8 +21,7 @@ try:
                         for key, val in status.items():
                                 print("{}: {}".format(key, val))
 except KeyboardInterrupt as e:
-        print(count)
         print("File size: {}".format(size))
         for key, val in status.items():
                 print("{}: {}".format(key, val))
-        sys.exit(0)
+        raise e
