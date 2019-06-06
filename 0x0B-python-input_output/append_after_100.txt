@@ -1,8 +1,8 @@
+Python
+"C is fun!"
+"C is fun!"
 At Holberton School,
 Python is really important,
-"C is fun!"
-"C is fun!"
-"C is fun!"
 "C is fun!"
 "C is fun!"
 "C is fun!"
@@ -11,14 +11,7 @@ But it can be very hard if:
 "C is fun!"
 "C is fun!"
 "C is fun!"
-"C is fun!"
-"C is fun!"
-"C is fun!"
 - You don't have strong C knowledge.
 Python
-"C is fun!"
-"C is fun!"
-"C is fun!"
-"C is fun!"
 "C is fun!"
 "C is fun!"
