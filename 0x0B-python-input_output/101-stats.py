@@ -2,12 +2,12 @@
 import signal
 import sys
 
+
 def receiveSignal(signalNumber, frame):
         print("File size: {}".format(size))
         tmpDic = sorted(status.items(), key=lambda t: t[0])
         for key, val in tmpDic:
                 print("{}: {}".format(key, val))
-
 count = 0
 status = {}
 size = 0
@@ -29,3 +29,7 @@ for line in sys.stdin:
                 tmpDic = sorted(status.items(), key=lambda t: t[0])
                 for key, val in tmpDic:
                         print("{}: {}".format(key, val))
+print("File size: {}".format(size))
+tmpDic = sorted(status.items(), key=lambda t: t[0])
+for key, val in tmpDic:
+        print("{}: {}".format(key, val))
