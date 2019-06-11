@@ -48,10 +48,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ doc """
-        if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)
-        else:
+        if cls.__name__ == "Square":
             dummy = cls(1)
+        elif cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
 
