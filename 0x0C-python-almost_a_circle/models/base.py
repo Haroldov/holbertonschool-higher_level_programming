@@ -9,6 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """ doc """
         if id is not None:
             self.id = id
         else:
@@ -17,6 +18,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ doc """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
@@ -24,6 +26,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ doc """
         filename = cls.__name__ + ".json"
         listDic = []
         for instance in list_objs:
@@ -36,6 +39,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ doc """
         if json_string is None or len(json_string) == 0:
             return []
         else:
@@ -43,12 +47,14 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ doc """
         dummy = cls(1, 1, 1)
         dummy.update(**dictionary)
         return dummy
 
     @classmethod
     def load_from_file(cls):
+        """ doc """
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r') as f:
