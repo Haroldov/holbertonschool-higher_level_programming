@@ -85,3 +85,8 @@ class Rectangle(Base):
         elif kwargs is not None:
             for attr, arg in kwargs.items():
                 setattr(self, attr, arg)
+
+    def to_dictionary(self):
+        attrs = ["id", "width", "height", "x", "y"]
+        vals = [self.id, self.width, self.height, self.x, self.y]
+        return dict(zip(attrs, vals))
