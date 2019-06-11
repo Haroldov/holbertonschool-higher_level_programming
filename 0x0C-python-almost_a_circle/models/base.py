@@ -84,7 +84,6 @@ class Base:
                 for instance in list_objs:
                     fd.writerow(list(instance.to_dictionary().values()))
 
-
     @classmethod
     def load_from_file_csv(cls):
         """ doc """
