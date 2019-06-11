@@ -5,7 +5,6 @@ from models.base import Base
 
 class Rectangle(Base):
     """ Rectangle class """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """ doc """
         super().__init__(id)
@@ -37,7 +36,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """ doc """
-       if type(height) is not int:
+        if type(height) is not int:
             raise TypeError("height must be an integer")
         elif height <= 0:
             raise ValueError("height must be > 0")
