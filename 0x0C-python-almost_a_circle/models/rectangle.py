@@ -76,3 +76,12 @@ class Rectangle(Base):
     def __str__(self):
         return ("[Rectangle] ({0:d}) {1:d}/{2:d} - {3:d}/{4:d}".format
                 (self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args, **kwargs):
+        if args is not None and len(args) != 0:
+            attrs = ["id", "width", "height", "x", "y"]
+            for arg, attr in zip(args, attrs):
+                setattr(self, attr, arg)
+        elif kwargs is not None:
+            for attr, arg in kwargs.items():
+                setattr(self, attr, arg)
