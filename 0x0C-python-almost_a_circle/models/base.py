@@ -29,12 +29,12 @@ class Base:
         """ doc """
         filename = cls.__name__ + ".json"
         listDic = []
-        for instance in list_objs:
-            listDic.append(instance.to_dictionary())
         with open(filename, 'w') as f:
             if list_objs is None:
                 f.write(cls.to_json_string([]))
             else:
+                for instance in list_objs:
+                    listDic.append(instance.to_dictionary())
                 f.write(cls.to_json_string(listDic))
 
     @staticmethod
