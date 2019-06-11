@@ -48,7 +48,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ doc """
-        dummy = cls(1, 1, 1)
+        dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
 
