@@ -33,9 +33,9 @@ class Base:
             listDic.append(instance.to_dictionary())
         with open(filename, 'w') as f:
             if list_objs is None:
-                f.write(to_json_string([]))
+                f.write(cls.to_json_string([]))
             else:
-                f.write(to_json_string(listDic))
+                f.write(cls.to_json_string(listDic))
 
     @staticmethod
     def from_json_string(json_string):
