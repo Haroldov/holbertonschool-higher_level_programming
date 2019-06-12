@@ -104,3 +104,8 @@ class Base:
         except:
             raise
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ doc """
+        
