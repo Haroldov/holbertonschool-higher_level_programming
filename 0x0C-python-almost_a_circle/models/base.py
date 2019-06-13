@@ -108,4 +108,3 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """ doc """
-        
