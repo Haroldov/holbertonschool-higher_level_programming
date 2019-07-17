@@ -1,0 +1,13 @@
+ables_in_hbtn_0d_tvshows
+tv_genres
+tv_show_genres
+tv_shows
+Field	Type	Null	Key	Default	Extra
+id	int(11)	NO	PRI	NULL	auto_increment
+name	varchar(256)	NO		NULL	
+Field	Type		Null		Key	Default	Extra
+show_id	int(11)		NO		MUL	NULL	
+genre_id		int(11)		NO	MUL	NULL	
+Field			Type		Null	Key	Default	Extra
+id			int(11)		NO	PRI	NULL	auto_increment
+title			varchar(256)	NO		NULL	
