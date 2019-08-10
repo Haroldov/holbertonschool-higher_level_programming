@@ -14,8 +14,8 @@ if __name__ == "__main__":
         engine = create_engine(url)
         Session = sessionmaker(bind=engine)
         session = Session()
-        query = session.query(State).filter(State.name ==
-                                            argv[4].split('\'')[0]).order_by(State.id)
+        query = session.query(State).filter(State.name == argv[4]
+                                            .split('\'')[0]).order_by(State.id)
         if len(query.all()) != 0:
             for ins in query:
                 print("{}".format(ins.id))
