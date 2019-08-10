@@ -14,9 +14,8 @@ if __name__ == "__main__":
         engine = create_engine(url)
         Session = sessionmaker(bind=engine)
         session = Session()
-        query = session.query(State).filter(State.id == 1).all()
-        if len(query) != 0:
+        query = session.query(State).first()
+        if query != None:
             print("{}: {}".format(query[0].id, query[0].name))
         else:
             print("Nothing")
-        session.close()
