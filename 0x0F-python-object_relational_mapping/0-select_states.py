@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# doc
+""" doc """
 
 import MySQLdb
 from sys import argv
