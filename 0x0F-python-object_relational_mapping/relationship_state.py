@@ -2,15 +2,15 @@
 """ docdddd """
 
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import ForeignKey
-from model_state import Base
+Base = declarative_base()
 
-class City(Base):
+
+class State(Base):
     """ docdddd """
-    __tablename__ = "cities"
+    __tablename__ = "states"
     id = Column('id', Integer, primary_key=True,
                 autoincrement=True, unique=True, nullable=False)
     name = Column('name', String(128), nullable=False)
-    state_id = Column('state_id', Integer,
-                      ForeignKey("states.id"), nullable=False)
+    cities = relationship('City', backref="state")
