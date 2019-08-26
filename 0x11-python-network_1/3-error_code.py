@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ doc """
 
-from urllib import request, parse
+from urllib import request, parse, error
 from sys import argv
 
 if __name__ == '__main__':
@@ -11,5 +11,5 @@ if __name__ == '__main__':
         with request.urlopen(req) as response:
             the_page = response.read()
             print(the_page.decode())
-    except urllib.error.HTTPError as e:
+    except error.HTTPError as e:
         print("Error code: {}".format(e.code))
