@@ -19,6 +19,6 @@ if __name__ == '__main__':
             print("Number of results: {}".format(des.get("count")))
             results = des.get("results")
             for json in results:
-                print("{}".format(json.get("name")))
+                print(json.get("name"))
     except ValueError:
         print("Not a valid JSON")
