@@ -24,6 +24,5 @@ if __name__ == '__main__':
                 des = requests.get(des.get("next")).json()
                 for json in des.get("results"):
                     print(json.get("name"))
- 
     except ValueError:
         print("Not a valid JSON")
