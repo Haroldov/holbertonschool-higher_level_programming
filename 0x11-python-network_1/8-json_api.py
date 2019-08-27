@@ -16,6 +16,6 @@ if __name__ == '__main__':
         if len(des) == 0:
             print("No result")
         else:
-            print("{}: {}".format(des.get("id"), des.get("name")))
+            print("[{}] {}".format(des.get("id"), des.get("name")))
     except ValueError:
         print("Not a valid JSON")
