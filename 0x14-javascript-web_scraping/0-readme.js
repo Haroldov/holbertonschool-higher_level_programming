@@ -1,4 +1,4 @@
-#!/usr/bin/nodejs
+#!/usr/bin/node
 const fd = require('fs');
 cb = (err, data) => {
     if (err) {
