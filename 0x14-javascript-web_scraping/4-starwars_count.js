@@ -5,7 +5,7 @@ const f = (error, response, code) => {
   let tmp; let cont = 0;
   for (const obj of JSON.parse(response.body).results) {
     const url = 'https://swapi.co/api/people/18/';
-    tmp = obj.characters.filter(urlTest => url === urlTest);
+    tmp = obj.characters.filter(urlTest => url == urlTest);
     cont = cont + tmp.length;
   }
   console.log(cont);
